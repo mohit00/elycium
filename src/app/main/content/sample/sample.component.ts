@@ -5,14 +5,12 @@ import { locale as english } from './i18n/en';
 import { locale as turkish } from './i18n/tr';
 
 @Component({
-    selector   : 'fuse-sample',
+    selector   : 'app-fuse-sample',
     templateUrl: './sample.component.html',
     styleUrls  : ['./sample.component.scss']
 })
-export class FuseSampleComponent
-{
-    constructor(private translationLoader: FuseTranslationLoaderService)
-    {
+export class FuseSampleComponent {
+    constructor(private translationLoader: FuseTranslationLoaderService)     {
         this.translationLoader.loadTranslations(english, turkish);
     }
 }

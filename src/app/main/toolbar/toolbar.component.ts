@@ -9,8 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls  : ['./toolbar.component.scss']
 })
 
-export class FuseToolbarComponent
-{
+export class FuseToolbarComponent {
     userStatusOptions: any[];
     languages: any;
     selectedLanguage: any;
@@ -21,8 +20,7 @@ export class FuseToolbarComponent
         private router: Router,
         private fuseConfig: FuseConfigService,
         private translate: TranslateService
-    )
-    {
+    )    {
         this.userStatusOptions = [
             {
                 'title': 'Online',
@@ -68,12 +66,10 @@ export class FuseToolbarComponent
 
         router.events.subscribe(
             (event) => {
-                if ( event instanceof NavigationStart )
-                {
+                if ( event instanceof NavigationStart )                {
                     this.showLoadingBar = true;
                 }
-                if ( event instanceof NavigationEnd )
-                {
+                if ( event instanceof NavigationEnd )                {
                     this.showLoadingBar = false;
                 }
             });
@@ -84,14 +80,12 @@ export class FuseToolbarComponent
 
     }
 
-    search(value)
-    {
+    search(value)    {
         // Do your search here...
         console.log(value);
     }
 
-    setLanguage(lang)
-    {
+    setLanguage(lang)    {
         // Set the selected language for toolbar
         this.selectedLanguage = lang;
 

@@ -25,6 +25,5 @@ const routes = [
     ]
 })
 
-export class FuseSampleModule
-{
+export class FuseSampleModule {
 }

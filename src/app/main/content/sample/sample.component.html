@@ -1,5 +1,44 @@
-<div class="page-layout blank p-24" fusePerfectScrollbar>
+<!-- BOARDS -->
+<div id="boards" class="mat-primary-400-bg" fxLayout="column" fxLayoutAlign="start center" fxFlex fusePerfectScrollbar>
 
-    <h2>{{'SAMPLE.HELLO' | translate}}</h2>
+    <div class="header pt-44 pt-mat-88" fxFlex="0 0 auto" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'100ms'}}">
+        <h1>Setting</h1>
+    </div>
 
+    <!-- BOARD LIST -->
+    <div class="board-list" fxFlex="0 0 auto" fxLayout="row" fxLayoutAlign="center center" fxLayoutWrap
+         *fuseIfOnDom [@animateStagger]="{value:'50'}">
+
+        <!-- BOARD -->
+    
+        <!-- / BOARD -->
+
+        <!-- NEW BOARD BUTTON -->
+        <div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center"
+              [@animate]="{value:'*',params:{y:'100%'}}" >
+            <mat-icon class="s-64"  [routerLink]="['/setting/student']" >add_circle</mat-icon>
+            <div class="board-name">Add Student/Teacher</div>
+        </div>
+        <div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center"
+        [@animate]="{value:'*',params:{y:'100%'}}">
+      <mat-icon class="s-64">add_circle</mat-icon>
+      <div class="board-name">School Setting</div>
+  </div>
+
+  <div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center"
+  [@animate]="{value:'*',params:{y:'100%'}}">
+<mat-icon class="s-64">add_circle</mat-icon>
+<div class="board-name">Communication Setting</div>
 </div>
+<div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center"
+[@animate]="{value:'*',params:{y:'100%'}}">
+<mat-icon class="s-64">add_circle</mat-icon>
+<div class="board-name">Template Setting</div>
+</div>
+ 
+        <!-- / NEW BOARD BUTTON -->
+
+    </div>
+    <!-- / BOARD LIST -->
+</div>
+<!-- / BOARDS -->

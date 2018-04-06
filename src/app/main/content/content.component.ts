@@ -12,8 +12,7 @@ import 'rxjs/add/operator/map';
     styleUrls  : ['./content.component.scss'],
     animations : fuseAnimations
 })
-export class FuseContentComponent implements OnInit, OnDestroy
-{
+export class FuseContentComponent implements OnInit, OnDestroy {
     onSettingsChanged: Subscription;
     fuseSettings: any;
 
@@ -27,14 +26,12 @@ export class FuseContentComponent implements OnInit, OnDestroy
         private router: Router,
         private activatedRoute: ActivatedRoute,
         private fuseConfig: FuseConfigService
-    )
-    {
+    )    {
         this.router.events
             .filter((event) => event instanceof NavigationEnd)
             .map(() => this.activatedRoute)
             .subscribe((event) => {
-                switch ( this.fuseSettings.routerAnimation )
-                {
+                switch ( this.fuseSettings.routerAnimation )                {
                     case 'fadeIn':
                         this.routeAnimationFade = !this.routeAnimationFade;
                         break;
@@ -62,13 +59,11 @@ export class FuseContentComponent implements OnInit, OnDestroy
                 );
     }
 
-    ngOnInit()
-    {
+    ngOnInit()    {
 
     }
 
-    ngOnDestroy()
-    {
+    ngOnDestroy()    {
         this.onSettingsChanged.unsubscribe();
     }
 }

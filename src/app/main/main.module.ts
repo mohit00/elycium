@@ -15,7 +15,7 @@ import { FuseQuickPanelComponent } from './quick-panel/quick-panel.component';
 import { FuseThemeOptionsComponent } from '../core/components/theme-options/theme-options.component';
 import { FuseShortcutsModule } from '../core/components/shortcuts/shortcuts.module';
 import { FuseSearchBarModule } from '../core/components/search-bar/search-bar.module';
-
+import { AlertModule } from 'ngx-bootstrap';
 @NgModule({
     declarations: [
         FuseContentComponent,
@@ -26,10 +26,11 @@ import { FuseSearchBarModule } from '../core/components/search-bar/search-bar.mo
         FuseToolbarComponent,
         FuseNavbarVerticalToggleDirective,
         FuseThemeOptionsComponent,
-        FuseQuickPanelComponent
+        FuseQuickPanelComponent,
+
     ],
     imports     : [
-        SharedModule,
+        SharedModule, AlertModule.forRoot(),
         RouterModule,
         FuseNavigationModule,
         FuseShortcutsModule,
@@ -40,6 +41,4 @@ import { FuseSearchBarModule } from '../core/components/search-bar/search-bar.mo
     ]
 })
 
-export class FuseMainModule
-{
-}
+export class FuseMainModule { }
