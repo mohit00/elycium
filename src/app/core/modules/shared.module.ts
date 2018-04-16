@@ -43,7 +43,7 @@ import { TranslateModule } from '@ngx-translate/core';
         ReactiveFormsModule,
         ColorPickerModule,
         NgxDnDModule,
-        NgxDatatableModule
+        NgxDatatableModule 
     ],
     exports        : [
         FlexLayoutModule,

@@ -16,7 +16,7 @@ import { FuseThemeOptionsComponent } from '../core/components/theme-options/them
 import { FuseShortcutsModule } from '../core/components/shortcuts/shortcuts.module';
 import { FuseSearchBarModule } from '../core/components/search-bar/search-bar.module';
 import { AlertModule } from 'ngx-bootstrap';
-@NgModule({
+ @NgModule({
     declarations: [
         FuseContentComponent,
         FuseFooterComponent,
@@ -27,7 +27,7 @@ import { AlertModule } from 'ngx-bootstrap';
         FuseNavbarVerticalToggleDirective,
         FuseThemeOptionsComponent,
         FuseQuickPanelComponent,
-
+ 
     ],
     imports     : [
         SharedModule, AlertModule.forRoot(),

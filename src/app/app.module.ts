@@ -10,8 +10,10 @@ import { FuseMainModule } from './main/main.module';
 import { FuseSplashScreenService } from './core/services/splash-screen.service';
 import { FuseConfigService } from './core/services/config.service';
 import { FuseNavigationService } from './core/components/navigation/navigation.service';
- import { TranslateModule } from '@ngx-translate/core';
-
+import { TranslateModule } from '@ngx-translate/core';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { AlertDialogComponent } from './dialog/alert-dialog/alert-dialog.component';
+  import { MatDialogModule } from '@angular/material'
 const appRoutes: Routes = [
     {
         path        : 'apps',
@@ -20,18 +22,24 @@ const appRoutes: Routes = [
     {
         path        : 'setting',
         loadChildren: './main/content/Setting/settingModule#SettingModule'
-    } ,
+    } ,{
+        path :'auth',
+        loadChildren: './main/content/auth/authModule#AuthModule'
+        
+    },
     {
         path      : '**',
-        redirectTo: 'apps/sample'
+        redirectTo: 'auth/login'
     }
 ];
 
 
 @NgModule({
     declarations: [
-        AppComponent
-    ],
+        AppComponent,
+        AlertDialogComponent
+     ],
+     entryComponents:[AlertDialogComponent],
     imports     : [
         BrowserModule,
         HttpClientModule,
@@ -39,7 +47,7 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         SharedModule,
         TranslateModule.forRoot(),
-        FuseMainModule
+        FuseMainModule,MatGridListModule,MatDialogModule
      ],
     providers   : [
         FuseSplashScreenService,

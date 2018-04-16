@@ -3,21 +3,24 @@ import { FuseNavbarVerticalService } from './navbar-vertical.service';
 import { FuseNavbarVerticalComponent } from './navbar-vertical.component';
 
 @Directive({
-    selector: '[ fuseNavbarVertical ]'
+    selector: '[fuseNavbarVertical]'
 })
 export class FuseNavbarVerticalToggleDirective
 {
     @Input() fuseNavbarVertical: string;
     navbar: FuseNavbarVerticalComponent;
 
-    constructor(private navbarService: FuseNavbarVerticalService) {
+    constructor(private navbarService: FuseNavbarVerticalService)
+    {
     }
 
     @HostListener('click')
-    onClick()    {
+    onClick()
+    {
         this.navbar = this.navbarService.getNavBar();
 
-        if ( !this.navbar[this.fuseNavbarVertical] )        {
+        if ( !this.navbar[this.fuseNavbarVertical] )
+        {
             return;
         }
 
