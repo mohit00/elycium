@@ -14,18 +14,21 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loginFormErrors: any;
   loginto(){
+       this.webService.LoginUser(this.loginForm.value).subscribe(res=> {
+alert(JSON.stringify(res))
+      })
   }
   constructor(
-      private WebService:WebService,
+      private webService: WebService,
       private fuseConfig: FuseConfigService,
       private formBuilder: FormBuilder,
   )
   {
       this.fuseConfig.setSettings({
           layout: {
-              navigation: 'none',
-              toolbar   : 'none',
-              footer    : 'none'
+              navigation: 'top',
+        //    toolbar   : 'none',
+             footer    : 'below'
           }
       });
 

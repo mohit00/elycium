@@ -30,8 +30,8 @@ export class FuseConfigService
             },
             colorClasses    : {
                 toolbar: 'mat-white-500-bg',
-                navbar : 'mat-fuse-dark-700-bg',
-                footer : 'mat-fuse-dark-900-bg'
+                navbar : 'mainolor',
+                footer : 'mainolor'
             },
             customScrollbars: true,
             routerAnimation : 'fadeIn' // fadeIn, slideUp, slideDown, slideRight, slideLeft, none

@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { FuseNavigationService } from './navigation.service';
 import { Subscription } from 'rxjs/Subscription';
-
+ 
 @Component({
     selector     : 'fuse-navigation',
     templateUrl  : './navigation.component.html',
@@ -14,9 +14,11 @@ export class FuseNavigationComponent implements OnDestroy
     navigationModelChangeSubscription: Subscription;
 
     @Input('layout') layout = 'vertical';
-
-    constructor(private fuseNavigationService: FuseNavigationService)
+     constructor(private fuseNavigationService: FuseNavigationService,  
+    )
     {
+
+      
         this.navigationModelChangeSubscription =
             this.fuseNavigationService.onNavigationModelChange
                 .subscribe((navigationModel) => {

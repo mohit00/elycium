@@ -1,5 +1,5 @@
-<a class="nav-link" *ngIf="item.url" [routerLink]="[item.url]" routerLinkActive="active"
-   [routerLinkActiveOptions]="{exact: item.exactMatch || false}" matRipple>
+<a class="nav-link" *ngIf="item.url &&  !item.ImageShow " [routerLink]="[item.url]" routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact: item.exactMatch || false}" matRipple  >
     <mat-icon class="nav-link-icon" *ngIf="item.icon">{{item.icon}}</mat-icon>
     <span class="nav-link-title" [translate]="item.translate">{{item.title}}</span>
     <span class="nav-link-badge" *ngIf="item.badge" [translate]="item.badge.translate"
@@ -7,7 +7,10 @@
         {{item.badge.title}}
     </span>
 </a>
-
+<a class="nav-link" *ngIf="item.url && item.ImageShow "  style ="width: 175px;"
+    matRipple  >
+   <img src = "assets/images/logos/logo.png"/>
+</a>
 <span class="nav-link" *ngIf="item.function" (click)="item.function()" matRipple>
     <mat-icon class="nav-link-icon" *ngIf="item.icon">{{item.icon}}</mat-icon>
     <span class="nav-link-title" [translate]="item.translate">{{item.title}}</span>

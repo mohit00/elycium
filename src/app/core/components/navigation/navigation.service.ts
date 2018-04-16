@@ -32,8 +32,8 @@ export class FuseNavigationService
      */
     setNavigationModel(model)
     {
-        this.navigationModel = model;
-        this.onNavigationModelChange.next(this.navigationModel.model);
+         this.navigationModel = model;
+         this.onNavigationModelChange.next(this.navigationModel.model);
     }
 
     /**

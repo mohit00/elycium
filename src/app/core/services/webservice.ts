@@ -24,6 +24,7 @@ import {
     User: any;
     BASE_URL = 'http://35.231.4.206/elyceum/';
     CREATE_USER ='user/signup';
+    USER_LOGIN ='user/login'
      constructor( private _http: Http, private router: Router,public dialog: MatDialog
      ) {
      }
@@ -41,19 +42,15 @@ import {
     });
   }
     CreateUser(data): Observable < any > {
-       // Class.accountManagementId = this.User.accountId;
-      // Class.orgId = this.User.orgId;
-    //   data.createDate = this.datepipe.transform(this.userdate, 'yyyy-MM-dd HH:mm:ss');
-      //alert(this.auth.tokenHeader);
       return this._http.post(this.BASE_URL + this.CREATE_USER, data)
         .map(res => < any > res.json())
         .catch(this.handleError);
     }
-    
-    
-  
-  
-  
+    LoginUser(data): Observable < any > {
+      return this._http.post(this.BASE_URL + this.USER_LOGIN, data)
+       .map(res => < any > res.json())
+       .catch(this.handleError);
+   } 
     // Handle Api Errors
     private handleError(error: Response) {
       console.log(error);
