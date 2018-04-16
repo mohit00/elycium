@@ -22,7 +22,7 @@ import {
     userSetdate:any;
     
     User: any;
-    BASE_URL = 'http://35.231.4.206/elyceum/app/';
+    BASE_URL = 'http://35.231.4.206/elyceum/';
     CREATE_USER ='user/signup';
      constructor( private _http: Http, private router: Router,public dialog: MatDialog
      ) {
