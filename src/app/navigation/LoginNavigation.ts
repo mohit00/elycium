@@ -26,7 +26,7 @@ export class LoginFuseNavigationModel implements FuseNavigationModelInterface
                 'translate': 'NAV.APPLICATIONS',
                 'type'    : 'item',
                 'url'  : '/auth/login',
-                'side': '80%',
+                'side': '72%',
 
                 'children': []
             },{

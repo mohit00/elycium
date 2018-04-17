@@ -38,7 +38,7 @@ export class AppComponent
             (event) => {
                 if ( event instanceof NavigationEnd )
                 {
-                     if(window.location.pathname == '/auth/login' || window.location.pathname == '/auth/register'){
+                     if(window.location.pathname == '/auth/login' || window.location.pathname == '/auth/register' || window.location.pathname == '/auth/forgot'){
                         this.fuseNavigationService.setNavigationModel(new LoginFuseNavigationModel());
                         this.translationLoader.loadTranslations(navigationEnglish, navigationTurkish);
                     }else{

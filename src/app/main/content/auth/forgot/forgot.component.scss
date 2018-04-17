@@ -5,9 +5,8 @@
     #forgot-password {
         width: 100%;
         overflow: auto;
-        background: url('/assets/images/backgrounds/dark-material-bg.jpg') no-repeat;
-        background-size: cover;
-
+        background: url('/assets/images/backgrounds/back.png') repeat;
+ 
         #forgot-password-form-wrapper {
             flex: 1 0 auto;
             padding: 32px;
@@ -31,12 +30,12 @@
 
                 .logo {
                     width: 128px;
-                    margin: 32px auto;
+                    margin: 0px auto;
                 }
 
                 .title {
-                    font-size: 20px;
-                    margin: 16px 0 32px 0;
+                    font-size: 18px;
+                    margin: 4px 0 0 0;
                 }
 
                 form {
@@ -57,9 +56,15 @@
                         }
                     }
                 }
+                .mat-grid-tile{
+                    padding-top: calc(((25% - 67px) * 1) + 0px) !important;
+                }
+                .mat-grid-list{
+                    padding-bottom: calc(((1 * ((25% - 55.75px) * 1)) + 0px) + 0px) !important;
 
+                }
                 .login {
-                    margin: 32px auto 24px auto;
+                    margin: 6px auto 4px auto;
                     width: 250px;
                     font-weight: 500;
 

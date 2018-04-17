@@ -21,9 +21,9 @@ export class ForgotComponent implements OnInit {
   {
       this.fuseConfig.setSettings({
           layout: {
-              navigation: 'none',
+              navigation: 'top',
               toolbar   : 'none',
-              footer    : 'none'
+              footer    : 'below'
           }
       });
 

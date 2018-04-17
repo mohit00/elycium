@@ -30,12 +30,12 @@
 
                 .logo {
                     width: 128px;
-                    margin: 32px auto;
+                    margin: 0px auto;
                 }
 
                 .title {
-                    font-size: 20px;
-                    margin: 16px 0 32px 0;
+                    font-size: 18px;
+                    margin: 4px 0 0px 0;
                 }
 
                 form {
@@ -51,8 +51,7 @@
                     }
 
                     .terms {
-                        margin: 16px 0 32px 0;
-
+                        margin: 8px 0 16px 0;
                         a {
                             font-size: 16px;
                             margin-left: 4px;
@@ -69,20 +68,28 @@
                         }
                     }
                 }
+                .mat-grid-tile{
+                    padding-top: calc(((25% - 40px) * 1) + 0px) !important;
+                 }
+                 .mat-grid-list{
+                    padding-bottom: calc(((1 * ((25% - 55.75px) * 1)) + 0px) + 0px) !important;
 
+                }
                 .register {
-                    margin: 32px auto 24px auto;
+                    margin: 6px auto 4px auto;
                     font-weight: 500;
 
                     .text {
                         margin-right: 8px;
                     }
                 }
-
-                .separator {
-                    font-size: 15px;
+                .mat-input-placeholder {
+                    font-size: 1px !important;
+                  }         
+                         .separator {
+                    font-size: 13px;
                     font-weight: 600;
-                    margin: 24px auto;
+                    margin: 15px auto;
                     position: relative;
                     overflow: hidden;
                     width: 100px;
