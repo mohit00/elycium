@@ -6,7 +6,9 @@
         width: 100%;
         overflow: auto;
         background: url('/assets/images/backgrounds/back.png') repeat;
- 
+        button, input, optgroup, select, textarea{
+            font-size: 14px !important;
+        }
         #forgot-password-form-wrapper {
             flex: 1 0 auto;
             padding: 32px;

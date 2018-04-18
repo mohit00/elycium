@@ -6,7 +6,15 @@
         width: 100%;
         overflow: auto;
         background: url('/assets/images/backgrounds/back.png') repeat;
- 
+        button, input, optgroup, select, textarea{
+            font-size: 14px !important;
+        }
+        .mat-placeholder{
+            font-size: 14px !important;
+        }
+        mat-form-field.mat-form-field {
+            font-size: 14px !important;
+          }
         #login-form-wrapper {
             flex: 1 0 auto;
             padding: 32px;
@@ -16,8 +24,8 @@
             }
 
             #login-form {
-                width: 500px;
-                max-width: 500px;
+                width: 450px;
+                max-width: 450px;
                 padding: 32px;
                 background: #FFFFFF;
                 text-align: center;
@@ -75,7 +83,11 @@
                         }
                     }
                 }
-
+                .mat-input-wrapper {
+                    font-size: 14px !important;
+                }
+                
+                
                 .register {
                     margin: 6px auto 4px auto;
                     font-weight: 500;
@@ -88,7 +100,7 @@
                     padding-top: calc(((25% - 40px) * 1) + 0px) !important;
                  }
                  .mat-grid-list{
-                    padding-bottom: calc(((1 * ((25% - 40px) * 1)) + 0px) + 0px) !important;
+                    padding-bottom: calc(((1 * ((25% - 20px) * 1)) + 0px) + 0px) !important;
 
                 }
                 .separator {

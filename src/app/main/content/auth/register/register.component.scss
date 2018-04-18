@@ -6,7 +6,20 @@
         width: 100%;
         overflow: auto;
         background: url('/assets/images/backgrounds/back.png') repeat;
- 
+        .mat-input-wrapper {
+            font-size: 14px !important;
+        }
+        button, input, optgroup, select, textarea{
+            font-size: 14px !important;
+        }
+        .mat-input-wrapper {
+            font-size: 16px !important;
+        }
+        
+         .mat-form-field-wrapper {
+            padding-bottom: 0.9em !important;
+        }
+    
         #register-form-wrapper {
             flex: 1 0 auto;
             padding: 32px;
@@ -16,8 +29,8 @@
             }
 
             #register-form {
-                width: 500px;
-                max-width: 500px;
+                width: 450px;
+                max-width: 450px;
                 padding: 32px;
                 background: #FFFFFF;
                 text-align: center;

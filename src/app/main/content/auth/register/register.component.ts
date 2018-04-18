@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit
             name           : {},
             email          : {},
             cemail          : {},
-            mobileNo:{},
+            mobileNo: {},
             password       : {},
             passwordConfirm: {}
         };
@@ -80,14 +80,13 @@ export class RegisterComponent implements OnInit
     }
     registerUser(){
         // alert(JSON.stringify(this.registerForm.value));
-        this.WebService.alertDialog('user has been','auth/login'); 
-        
-        this.WebService.CreateUser(this.registerForm.value).subscribe(res=>{
-alert(JSON.stringify(res));
-        })
-    }
+        this.WebService.CreateUser(this.registerForm.value).subscribe(res => {
+  if ( res.status == true) {
+    this.WebService.alertDialog(res.message, 'auth/login');
+}else {
+    this.WebService.alertDialog(res.message, 'auth/register');
 }
-
+        })}}
 function confirmPassword(control: AbstractControl)
 {
     if ( !control.parent || !control )
